@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_caddy_1695103003096-pr-trigger-input-set
+  identifier: Build_caddy_1695103003096prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Caddy
+  pipeline:
+    identifier: Build_caddy_1695103003096
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
