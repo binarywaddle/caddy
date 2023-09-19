@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_caddy_1695103003096-push-trigger-input-set
+  identifier: Build_caddy_1695103003096pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Caddy
+  pipeline:
+    identifier: Build_caddy_1695103003096
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
