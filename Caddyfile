@@ -1,0 +1,22 @@
+{
+        admin 0.0.0.0:2019
+        servers {
+                metrics
+        }
+        email admin@codepenguin.io
+        acme_ca https://acme-v02.api.letsencrypt.org/directory
+        acme_dns porkbun {
+                api_key pk1_461881da5d2050ef9d0886d3ab1861d4e62d5faa66e94928d1489c5688196d6c
+                api_secret_key sk1_ddb1e6714401bf274bd827e4cdbbdbc9a0dffb9727e332a3f3f5c90283a36ed1
+        }
+}
+proxy.ontheflytesting.xyz {
+        handle /metrics {
+                reverse_proxy localhost:2019
+        }
+        handle /report {
+                root * /var/tmp
+                try_files * report.html
+                file_server
+
+}
